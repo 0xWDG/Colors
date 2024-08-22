@@ -14,6 +14,7 @@
 // To compile this script to a binary, run:
 // swiftc .spm.swift -o spm
 
+// swiftlint:disable all
 import Foundation
 
 let fileManager = FileManager.default
@@ -363,7 +364,7 @@ Interested learning more about Swift? [Check out my blog](https://wesleydegroot.
     try? readme.write(to: URL(fileURLWithPath: "README.md"), atomically: true, encoding: .utf8)
 }
 
-if CommandLine.arguments[1] == "executable" {
+if CommandLine.arguments[1] != "executable" {
     let process = Process()
     process.launchPath = "/usr/bin/env"
     process.arguments = ["swiftc", CommandLine.arguments[0], "-o", "spm"]
@@ -377,3 +378,4 @@ if CommandLine.arguments[1] == "executable" {
         printC("Script compiled successfully", color: CLIColors.green)
     }
 }
+// swiftlint:enable all

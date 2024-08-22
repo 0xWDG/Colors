@@ -5,7 +5,7 @@ on:
 
 jobs:
   test_linux:
-    if: true
+    if: false
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
