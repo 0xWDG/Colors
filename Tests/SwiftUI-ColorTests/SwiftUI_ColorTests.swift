@@ -11,7 +11,7 @@
 import XCTest
 @testable import SwiftUI_Color
 
-final class SwiftUI_ColorTests: XCTestCase {
+final class SwiftUIColorTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
