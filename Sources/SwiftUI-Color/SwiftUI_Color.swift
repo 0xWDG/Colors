@@ -115,61 +115,59 @@ extension Color {
     static let selectedMenuItemTextColor = Color.white
 #elseif canImport(AppKit)
     // MARK: - MacOS: Text Colors
-    static let lightText = Color(UIColor.lightText.cgColor)
-    static let darkText = Color(UIColor.darkText.cgColor)
-    static let placeholderText = Color(UIColor.placeholderText.cgColor)
+    static let lightText = Color.white //Color(UIColor.lightText.cgColor)
+    static let darkText = Color.white //Color(UIColor.darkText.cgColor)
+    static let placeholderText = Color.white //Color(UIColor.placeholderText.cgColor)
 
     // MARK: - MacOS: Label Colors
-    static let label = Color(UIColor.label.cgColor)
-    static let secondaryLabel = Color(UIColor.secondaryLabel.cgColor)
-    static let tertiaryLabel = Color(UIColor.tertiaryLabel.cgColor)
-    static let quaternaryLabel = Color(UIColor.quaternaryLabel.cgColor)
+    static let label = Color.white //Color(UIColor.label.cgColor)
+    static let secondaryLabel = Color.white //Color(UIColor.secondaryLabel.cgColor)
+    static let tertiaryLabel = Color.white //Color(UIColor.tertiaryLabel.cgColor)
+    static let quaternaryLabel = Color.white //Color(UIColor.quaternaryLabel.cgColor)
 
     // MARK: - MacOS: Background Colors
-    static let systemBackground = Color(UIColor.systemBackground.cgColor)
-    static let secondarySystemBackground = Color(UIColor.secondarySystemBackground.cgColor)
-    static let tertiarySystemBackground = Color(UIColor.tertiarySystemBackground.cgColor)
+    static let systemBackground = Color.white //Color(UIColor.systemBackground.cgColor)
+    static let secondarySystemBackground = Color.white //Color(UIColor.secondarySystemBackground.cgColor)
+    static let tertiarySystemBackground = Color.white //Color(UIColor.tertiarySystemBackground.cgColor)
 
     // MARK: - MacOS: Fill Colors
     /// systemFillColor is appropriate for filling thin and small shapes.
     ///
     /// Example: The track of a slider.
-    static let systemFill = Color(UIColor.systemFill.cgColor)
+    static let systemFill = Color.white //Color(UIColor.systemFill.cgColor)
     /// secondarySystemFillColor is appropriate for filling medium-size shapes.
     ///
     /// Example: The background of a switch.
-    static let secondarySystemFill = Color(UIColor.secondarySystemFill.cgColor)
+    static let secondarySystemFill = Color.white //Color(UIColor.secondarySystemFill.cgColor)
     /// tertiarySystemFillColor is appropriate for filling large shapes.
     ///
     /// Examples: Input fields, search bars, buttons.
-    static let tertiarySystemFill = Color(UIColor.tertiarySystemFill.cgColor)
+    static let tertiarySystemFill = Color.white //Color(UIColor.tertiarySystemFill.cgColor)
     /// quaternarySystemFillColor is appropriate for filling large areas containing complex content.
     ///
     /// Example: Expanded table cells.
-    static let quaternarySystemFill = Color(UIColor.quaternarySystemFill.cgColor)
+    static let quaternarySystemFill = Color.white //Color(UIColor.quaternarySystemFill.cgColor)
 
     // MARK: - MacOS: Grouped Background Colors
-    static let systemGroupedBackground = Color(UIColor.systemGroupedBackground.cgColor)
-    static let secondarySystemGroupedBackground = Color(
-        nsColor: .init(
-            light: .init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1),
-            dark: .init(red: 1, green: 1, blue: 1, alpha: 1)
-        )
-    )
-    static let tertiarySystemGroupedBackground = Color(UIColor.tertiarySystemGroupedBackground.cgColor)
+    static let systemGroupedBackground = Color.white //Color(UIColor.systemGroupedBackground.cgColor)
+    static let secondarySystemGroupedBackground = Color(CGColor.dynamicColor(
+            light: NSColor.init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1),
+            dark: NSColor.init(red: 1, green: 1, blue: 1, alpha: 1)
+    ))
+    static let tertiarySystemGroupedBackground = Color.white // Color(UIColor.tertiarySystemGroupedBackground.cgColor)
 
     // MARK: - MacOS: Gray Colors
-    static let systemGray = Color(UIColor.systemGray.cgColor)
-    static let systemGray2 = Color(UIColor.systemGray2.cgColor)
-    static let systemGray3 = Color(UIColor.systemGray3.cgColor)
-    static let systemGray4 = Color(UIColor.systemGray4.cgColor)
-    static let systemGray5 = Color(UIColor.systemGray5.cgColor)
-    static let systemGray6 = Color(UIColor.systemGray6.cgColor)
+    static let systemGray = Color.white // Color(UIColor.systemGray.cgColor)
+    static let systemGray2 = Color.white // Color(UIColor.systemGray2.cgColor)
+    static let systemGray3 = Color.white // Color(UIColor.systemGray3.cgColor)
+    static let systemGray4 = Color.white // Color(UIColor.systemGray4.cgColor)
+    static let systemGray5 = Color.white // Color(UIColor.systemGray5.cgColor)
+    static let systemGray6 = Color.white // Color(UIColor.systemGray6.cgColor)
 
     // MARK: - MacOS: Other Colors
-    static let separator = Color(UIColor.separator.cgColor)
-    static let opaqueSeparator = Color(UIColor.opaqueSeparator.cgColor)
-    static let link = Color(UIColor.link.cgColor)
+    static let separator = Color.white // Color(UIColor.separator.cgColor)
+    static let opaqueSeparator = Color.white // Color(UIColor.opaqueSeparator.cgColor)
+    static let link = Color.white // Color(UIColor.link.cgColor)
 
     // MARK: MacOS: System Colors
     static let systemBlue = Color(NSColor.systemBlue.cgColor)
@@ -232,8 +230,8 @@ extension NSAppearance {
     }
 }
 
-extension NSColor {
-    func `init`(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> NSColor {
+extension CGColor {
+    static func dynamicColor(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> CGColor {
         return NSColor(
             name: named,
             dynamicProvider: { traits in
@@ -243,7 +241,7 @@ extension NSColor {
                     return dark
                 }
             }
-        )
+        ).cgColor
     }
 }
 #endif

@@ -7,7 +7,7 @@ let package = Package(
     name: "SwiftUI-Color",
     platforms: [
         .iOS(.v13),
-        .macOS(.v10_15),
+        .macOS(.v11),
         .watchOS(.v6),
         .tvOS(.v13)
     ],
