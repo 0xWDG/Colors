@@ -231,7 +231,7 @@ extension NSAppearance {
 }
 
 extension CGColor {
-    public static func dynamicColor(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> CGColor {
+    fileprivate static func dynamicColor(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> CGColor {
         return NSColor(
             name: named,
             dynamicProvider: { traits in
