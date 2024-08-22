@@ -233,7 +233,7 @@ extension NSAppearance {
 }
 
 extension NSColor {
-    func init(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> NSColor {
+    func `init`(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> NSColor {
         return NSColor(
             name: named,
             dynamicProvider: { traits in
