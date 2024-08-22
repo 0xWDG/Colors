@@ -1,6 +1,6 @@
 //
-//  SwiftUI_Color.swift
-//  SwiftUI-Color
+//  Colors.swift
+//  Colors
 //
 //  Created by Wesley de Groot on 2024-08-22.
 //  https://wesleydegroot.nl

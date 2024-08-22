@@ -1,6 +1,6 @@
-# SwiftUI-Color
+# Colors
 
-SwiftUI-Color is a Swift Package for ...
+Colors is a Swift Package for ...
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
@@ -16,11 +16,11 @@ SwiftUI-Color is a Swift Package for ...
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/0xWDG/SwiftUI-Color.git", branch: "main"),
+    .package(url: "https://github.com/0xWDG/Colors.git", branch: "main"),
 ],
 targets: [
     .target(name: "MyTarget", dependencies: [
-        .product(name: "SwiftUI-Color", package: "SwiftUI-Color"),
+        .product(name: "Colors", package: "Colors"),
     ]),
 ]
 ```
@@ -28,14 +28,14 @@ targets: [
 ## Installation (Xcode)
 
 1. In Xcode, open your project and navigate to **File** → **Swift Packages** → **Add Package Dependency...**
-2. Paste the repository URL (`https://github.com/0xWDG/SwiftUI-Color`) and click **Next**.
+2. Paste the repository URL (`https://github.com/0xWDG/Colors`) and click **Next**.
 3. Click **Finish**.
 
 ## Usage
 
 ```swift
 import SwiftUI
-import SwiftUI-Color
+import Colors
 
 struct ContentView: View {
     var body: some View {

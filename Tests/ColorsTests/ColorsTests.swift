@@ -1,6 +1,6 @@
 //
-//  SwiftUI_ColorTests.swift
-//  SwiftUI-Color
+//  ColorsTests.swift
+//  Colors
 //
 //  Created by Wesley de Groot on 2024-08-22.
 //  https://wesleydegroot.nl
@@ -9,9 +9,9 @@
 //  MIT License
 //
 import XCTest
-@testable import SwiftUI_Color
+@testable import Colors
 
-final class SwiftUIColorTests: XCTestCase {
+final class ColorsTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

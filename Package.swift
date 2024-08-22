@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI-Color",
+    name: "Colors",
     platforms: [
         .iOS(.v14),
         .macOS(.v11),
@@ -14,16 +14,16 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SwiftUI-Color",
-            targets: ["SwiftUI-Color"])
+            name: "Colors",
+            targets: ["Colors"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SwiftUI-Color"),
+            name: "Colors"),
         .testTarget(
-            name: "SwiftUI-ColorTests",
-            dependencies: ["SwiftUI-Color"])
+            name: "ColorsTests",
+            dependencies: ["Colors"])
     ]
 )
