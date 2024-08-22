@@ -1,11 +1,11 @@
-# spm-template
+# SwiftUI-Color
 
-spm-template is a Swift Package for ...
+SwiftUI-Color is a Swift Package for ...
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2Fspm-template%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/spm-template)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2Fspm-template%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xWDG/spm-template)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
 [![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
-![License](https://img.shields.io/github/license/0xWDG/spm-template)
+![License](https://img.shields.io/github/license/0xWDG/SwiftUI-Color)
 
 ## Requirements
 
@@ -16,11 +16,11 @@ spm-template is a Swift Package for ...
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/0xWDG/spm-template.git", branch: "main"),
+    .package(url: "https://github.com/0xWDG/SwiftUI-Color.git", branch: "main"),
 ],
 targets: [
     .target(name: "MyTarget", dependencies: [
-        .product(name: "spm-template", package: "spm-template"),
+        .product(name: "SwiftUI-Color", package: "SwiftUI-Color"),
     ]),
 ]
 ```
@@ -28,14 +28,14 @@ targets: [
 ## Installation (Xcode)
 
 1. In Xcode, open your project and navigate to **File** → **Swift Packages** → **Add Package Dependency...**
-2. Paste the repository URL (`https://github.com/0xWDG/spm-template`) and click **Next**.
+2. Paste the repository URL (`https://github.com/0xWDG/SwiftUI-Color`) and click **Next**.
 3. Click **Finish**.
 
 ## Usage
 
 ```swift
 import SwiftUI
-import spm-template
+import SwiftUI-Color
 
 struct ContentView: View {
     var body: some View {
