@@ -57,17 +57,17 @@ extension Color {
 
     // MARK: - iOS: Background Colors
     /// A color that represents the system-provided background color.
-    /// 
+    ///
     /// Use this color for the main background of your interface.
     public static let systemBackground = Color(UIColor.systemBackground.cgColor)
 
     /// A color that represents the system-provided secondary background color.
-    /// 
+    ///
     /// Use this color for content layered on top of the main background.
     public static let secondarySystemBackground = Color(UIColor.secondarySystemBackground.cgColor)
 
     /// A color that represents the system-provided tertiary background color.
-    /// 
+    ///
     /// Use this color for content layered on top of secondary backgrounds.
     public static let tertiarySystemBackground = Color(UIColor.tertiarySystemBackground.cgColor)
 
@@ -94,64 +94,64 @@ extension Color {
 
     // MARK: - iOS: Grouped Background Colors
     /// A color that represents the system-provided grouped background color.
-    /// 
+    ///
     /// Use this color for the main background in a grouped interface, such as a grouped table view.
     public static let systemGroupedBackground = Color(UIColor.systemGroupedBackground.cgColor)
 
     /// A color that represents the system-provided secondary grouped background color.
-    /// 
+    ///
     /// Use this color for content layered on top of the main grouped background.
     public static let secondarySystemGroupedBackground = Color(UIColor.secondarySystemGroupedBackground.cgColor)
 
     /// A color that represents the system-provided tertiary grouped background color.
-    /// 
+    ///
     /// Use this color for content layered on top of secondary grouped backgrounds.
     public static let tertiarySystemGroupedBackground = Color(UIColor.tertiarySystemGroupedBackground.cgColor)
 
     // MARK: - iOS: Gray Colors
     /// A color that represents the system-provided gray color.
-    /// 
+    ///
     /// Use this color for standard text labels.
     public static let systemGray = Color(UIColor.systemGray.cgColor)
 
     /// A color that represents the system-provided gray2 color.
-    /// 
+    ///
     /// Use this color for text labels that contain secondary content.
     public static let systemGray2 = Color(UIColor.systemGray2.cgColor)
 
     /// A color that represents the system-provided gray3 color.
-    /// 
+    ///
     /// Use this color for text labels that contain tertiary content.
     public static let systemGray3 = Color(UIColor.systemGray3.cgColor)
 
     /// A color that represents the system-provided gray4 color.
-    /// 
+    ///
     /// Use this color for text labels that contain quaternary content.
     public static let systemGray4 = Color(UIColor.systemGray4.cgColor)
 
     /// A color that represents the system-provided gray5 color.
-    /// 
+    ///
     /// Use this color for text labels that contain quinary content.
     public static let systemGray5 = Color(UIColor.systemGray5.cgColor)
 
     /// A color that represents the system-provided gray6 color.
-    /// 
+    ///
     /// Use this color for text labels that contain senary content.
     public static let systemGray6 = Color(UIColor.systemGray6.cgColor)
 
     // MARK: - iOS: Other Colors
     /// A color that represents the system-provided separator color.
-    /// 
+    ///
     /// Use this color for thin borders or divider lines that allows some underlying content to be visible.
     public static let separator = Color(UIColor.separator.cgColor)
 
     /// A color that represents the system-provided opaque separator color.
-    /// 
+    ///
     /// Use this color for borders or divider lines that are opaque.
     public static let opaqueSeparator = Color(UIColor.opaqueSeparator.cgColor)
 
     /// A color that represents the system-provided link color.
-    /// 
+    ///
     /// Use this color for links.
     public static let link = Color(UIColor.link.cgColor)
 
@@ -184,41 +184,276 @@ extension Color {
     public static let systemIndigo = Color(UIColor.systemIndigo.cgColor)
 
     // MARK: iOS: MacOS Specific
-    public static let scrubberTexturedBackground = Color.white
-    public static let textBackgroundColor = Color.white
-    public static let controlTextColor = Color.white
-    public static let quaternaryLabelColor = Color.white
-    public static let findHighlightColor = Color.white
-    public static let highlightColor = Color.white
-    public static let shadowColor = Color.white
-    public static let windowFrameTextColor = Color.white
-    public static let windowBackgroundColor = Color.white
-    public static let keyboardFocusIndicatorColor = Color.white
-    public static let separatorColor = Color.white
-    public static let selectedControlColor = Color.white
-    public static let controlBackgroundColor = Color.white
-    public static let secondaryLabelColor = Color.white
-    public static let tertiaryLabelColor = Color.white
-    public static let gridColor = Color.white
-    public static let alternateSelectedControlTextColor = Color.white
-    public static let unemphasizedSelectedContentBackgroundColor = Color.white
-    // swiftlint:disable:previous identifier_name
-    public static let textColor = Color.white
-    public static let systemBrown = Color.white
-    public static let selectedContentBackgroundColor = Color.white
-    public static let selectedTextColor = Color.white
-    public static let labelColor = Color.white
-    public static let placeholderTextColor = Color.white
-    public static let unemphasizedSelectedTextBackgroundColor = Color.white
-    public static let disabledControlTextColor = Color.white
-    public static let headerTextColor = Color.white
-    public static let linkColor = Color.white
-    public static let selectedTextBackgroundColor = Color.white
-    public static let unemphasizedSelectedTextColor = Color.white
-    public static let controlColor = Color.white
-    public static let selectedControlTextColor = Color.white
-    public static let underPageBackgroundColor = Color.white
-    public static let selectedMenuItemTextColor = Color.white
+    /// A color that represents the system-provided scrubber textured background color.
+    ///
+    /// Use this color for the background of a scrubber control.
+    public static let scrubberTexturedBackground = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided text background color.
+    ///
+    /// Use this color for the background of large text, such as in a text view or word processing document.
+    public static let textBackgroundColor = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.12, green: 0.12, blue: 0.12, alpha: 1)
+    )
+
+    /// A color that represents the system-provided control text color.
+    ///
+    /// Use this color for text on top of standard system controls.
+    public static let controlTextColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided quaternary label color.
+    ///
+    /// Use this color for text labels that contain quaternary content.
+    public static let quaternaryLabelColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided find highlight color.
+    ///
+    /// Use this color for the highlight color of find indicators.
+    public static let findHighlightColor = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 0.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided highlight color.
+    ///
+    /// Use this color for the highlight color of selection controls.
+    public static let highlightColor = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.71, green: 0.71, blue: 0.71, alpha: 1)
+    )
+
+    /// A color that represents the system-provided shadow color.
+    ///
+    /// Use this color for shadows cast by raised objects on a surface.
+    public static let shadowColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided window frame text color.
+    ///
+    /// Use this color for text in the frame of a window.
+    public static let windowFrameTextColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided window background color.
+    ///
+    /// Use this color for the background of windows.
+    public static let windowBackgroundColor = Color.dynamicColor(
+        light: .init(red: 0.93, green: 0.93, blue: 0.93, alpha: 1),
+        dark: .init(red: 0.20, green: 0.20, blue: 0.20, alpha: 1)
+    )
+
+    /// A color that represents the system-provided keyboard focus indicator color.
+    ///
+    /// Use this color for the keyboard focus ring around a control.
+    public static let keyboardFocusIndicatorColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.40, blue: 0.96, alpha: 1),
+        dark: .init(red: 0.10, green: 0.66, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided separator color.
+    ///
+    /// Use this color for thin borders or divider lines that allows some underlying content to be visible.
+    public static let separatorColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected control color.
+    ///
+    /// Use this color for the background of selected controls.
+    public static let selectedControlColor = Color.dynamicColor(
+        light: .init(red: 0.70, green: 0.84, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.25, green: 0.39, blue: 0.55, alpha: 1)
+    )
+
+    /// A color that represents the system-provided control background color.
+    ///
+    /// Use this color for the background of standard system controls.
+    public static let controlBackgroundColor = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.12, green: 0.12, blue: 0.12, alpha: 1)
+    )
+
+    /// A color that represents the system-provided secondary label color.
+    ///
+    /// Use this color for text labels that contain secondary content.
+    public static let secondaryLabelColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided tertiary label color.
+    ///
+    /// Use this color for text labels that contain tertiary content.
+    public static let tertiaryLabelColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided grid color.
+    ///
+    /// Use this color for gridlines in a table view.
+    public static let gridColor = Color.dynamicColor(
+        light: .init(red: 0.90, green: 0.90, blue: 0.90, alpha: 1),
+        dark: .init(red: 0.10, green: 0.10, blue: 0.10, alpha: 1)
+    )
+
+    /// A color that represents the system-provided alternate selected control text color.
+    ///
+    /// Use this color for text on top of selected controls.
+    public static let alternateSelectedControlTextColor = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided unemphasized selected content background color.
+    ///
+    /// Use this color for the background of selected content that is unemphasized.
+    public static let unemphasizedSelectedContentBackgroundColor = Color.dynamicColor(
+        // swiftlint:disable:previous identifier_name
+        light: .init(red: 0.86, green: 0.86, blue: 0.86, alpha: 1),
+        dark: .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1)
+    )
+
+    /// A color that represents the system-provided text color.
+    ///
+    /// Use this color for text labels.
+    public static let textColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided system brown color.
+    public static let systemBrown = Color.dynamicColor(
+                light: .init(red: 0.64, green: 0.52, blue: 0.37, alpha: 1),
+                dark: .init(red: 0.67, green: 0.56, blue: 0.41, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected content background color.
+    ///
+    /// Use this color for the background of selected content.
+    public static let selectedContentBackgroundColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.39, blue: 0.88, alpha: 1),
+                dark: .init(red: 0.00, green: 0.35, blue: 0.82, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected text color.
+    ///
+    /// Use this color for selected text.
+    public static let selectedTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided label color.
+    ///
+    /// Use this color for standard text labels.
+    public static let labelColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided unemphasized selected text color.
+    ///
+    /// Use this color for unemphasized selected text.
+    public static let placeholderTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided unemphasized selected text background color.
+    ///
+    /// Use this color for the background of unemphasized selected text.
+    public static let unemphasizedSelectedTextBackgroundColor = Color.dynamicColor(
+                light: .init(red: 0.86, green: 0.86, blue: 0.86, alpha: 1),
+                dark: .init(red: 0.27, green: 0.27, blue: 0.27, alpha: 1)
+    )
+
+    /// A color that represents the system-provided disabled control text color.
+    ///
+    /// Use this color for text on disabled controls.
+    public static let disabledControlTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided header text color.
+    ///
+    /// Use this color for text in headers.
+    public static let headerTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided link color.
+    ///
+    /// Use this color for links.
+    public static let linkColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.41, blue: 0.85, alpha: 1),
+                dark: .init(red: 0.25, green: 0.61, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected text background color.
+    ///
+    /// Use this color for the background of selected text.
+    public static let selectedTextBackgroundColor = Color.dynamicColor(
+                light: .init(red: 0.70, green: 0.84, blue: 1.00, alpha: 1),
+                dark: .init(red: 0.25, green: 0.39, blue: 0.55, alpha: 1)
+    )
+
+    /// A color that represents the system-provided control color.
+    ///
+    /// Use this color for standard system controls.
+    public static let unemphasizedSelectedTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided under page background color.
+    ///
+    /// Use this color for the background of a page that is under another page.
+    public static let controlColor = Color.dynamicColor(
+                light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected control text color.
+    ///
+    /// Use this color for text on top of selected controls.
+    public static let selectedControlTextColor = Color.dynamicColor(
+                light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided under page background color.
+    ///
+    /// Use this color for the background of a page that is under another page.
+    public static let underPageBackgroundColor = Color.dynamicColor(
+                light: .init(red: 0.59, green: 0.59, blue: 0.59, alpha: 1),
+                dark: .init(red: 0.16, green: 0.16, blue: 0.16, alpha: 1)
+    )
+
+    /// A color that represents the system-provided selected menu item text color.
+    ///
+    /// Use this color for the text of selected menu items.
+    public static let selectedMenuItemTextColor = Color.dynamicColor(
+                light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+                dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
 #elseif canImport(AppKit)
     // MARK: - MacOS: Text Colors
     /// A color that represents the system-provided text color.
@@ -226,215 +461,215 @@ extension Color {
     /// Use this color for text in a standard state, such as a label in a navigation bar or a system button.
     ///
     /// - Note: When possible, we recommend using `labelColor` and its variants, instead.
-    public static let lightText = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
-        dark: NSColor.init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
-    ))
+    public static let lightText = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
 
     /// A color that represents the system-provided text color.
     ///
     /// Use this color for text in a standard state, such as a label in a navigation bar or a system button.
     ///
     /// - Note: When possible, we recommend using `labelColor` and its variants, instead.
-    public static let darkText = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
-        dark: NSColor.init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
-    ))
+    public static let darkText = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
+    )
 
     /// Foreground color for placeholder text in controls or text fields or text views.
     ///
     /// Use this color for placeholder text in controls or text views.
-    public static let placeholderText = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
-        dark: NSColor.init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
-    ))
+    public static let placeholderText = Color.dynamicColor(
+        light: .init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
+        dark: .init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
+    )
 
     // MARK: - MacOS: Label Colors
     /// A color that represents the system-provided label color.
     ///
     /// Use this color for standard text labels.
-    public static let label = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
-        dark: NSColor.init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
-    ))
+    public static let label = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
+        dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
 
     /// A color that represents the system-provided secondary label color.
     ///
     /// Use this color for text labels that contain secondary content.
-    public static let secondaryLabel = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
-        dark: NSColor.init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
-    ))
+    public static let secondaryLabel = Color.dynamicColor(
+        light: .init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
+        dark: .init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
+    )
 
     /// A color that represents the system-provided tertiary label color.
     ///
     /// Use this color for text labels that contain tertiary content.
-    public static let tertiaryLabel = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
-        dark: NSColor.init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
-    ))
+    public static let tertiaryLabel = Color.dynamicColor(
+        light: .init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
+        dark: .init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
+    )
 
     /// A color that represents the system-provided quaternary label color.
     ///
     /// Use this color for text labels that contain quaternary content.
-    public static let quaternaryLabel = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
-        dark: NSColor.init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
-    ))
+    public static let quaternaryLabel = Color.dynamicColor(
+        light: .init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
+        dark: .init(red: 0.92, green: 0.92, blue: 0.96, alpha: 1)
+    )
 
     // MARK: - MacOS: Background Colors
     /// A color that represents the system-provided background color.
-    /// 
+    ///
     /// Use this color for the main background of your interface.
-    public static let systemBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
-        dark: NSColor.init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
-    ))
+    public static let systemBackground = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
+    )
 
     /// A color that represents the system-provided secondary background color.
-    /// 
+    ///
     /// Use this color for content layered on top of the main background.
-    public static let secondarySystemBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
-        dark: NSColor.init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1)
-    ))
+    public static let secondarySystemBackground = Color.dynamicColor(
+        light: .init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
+        dark: .init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1)
+    )
 
     /// A color that represents the system-provided tertiary background color.
-    /// 
+    ///
     /// Use this color for content layered on top of secondary backgrounds.
-    public static let tertiarySystemBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
-        dark: NSColor.init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
-    ))
+    public static let tertiarySystemBackground = Color.dynamicColor(
+        light: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
+    )
 
     // MARK: - MacOS: Fill Colors
     /// systemFillColor is appropriate for filling thin and small shapes.
     ///
     /// Example: The track of a slider.
-    public static let systemFill = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1),
-        dark: NSColor.init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1)
-    ))
+    public static let systemFill = Color.dynamicColor(
+        light: .init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1),
+        dark: .init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1)
+    )
     /// secondarySystemFillColor is appropriate for filling medium-size shapes.
     ///
     /// Example: The background of a switch.
-    public static let secondarySystemFill = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1),
-        dark: NSColor.init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1)
-    ))
+    public static let secondarySystemFill = Color.dynamicColor(
+        light: .init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1),
+        dark: .init(red: 0.47, green: 0.47, blue: 0.50, alpha: 1)
+    )
     /// tertiarySystemFillColor is appropriate for filling large shapes.
     ///
     /// Examples: Input fields, search bars, buttons.
-    public static let tertiarySystemFill = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1),
-        dark: NSColor.init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1)
-    ))
+    public static let tertiarySystemFill = Color.dynamicColor(
+        light: .init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1),
+        dark: .init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1)
+    )
     /// quaternarySystemFillColor is appropriate for filling large areas containing complex content.
     ///
     /// Example: Expanded table cells.
-    public static let quaternarySystemFill = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.45, green: 0.45, blue: 0.50, alpha: 1),
-        dark: NSColor.init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1)
-    ))
+    public static let quaternarySystemFill = Color.dynamicColor(
+        light: .init(red: 0.45, green: 0.45, blue: 0.50, alpha: 1),
+        dark: .init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1)
+    )
 
     // MARK: - MacOS: Grouped Background Colors
     /// A color that represents the system-provided grouped background color.
-    /// 
+    ///
     /// Use this color for the main background in a grouped interface, such as a grouped table view.
-    public static let systemGroupedBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
-        dark: NSColor.init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
-    ))
+    public static let systemGroupedBackground = Color.dynamicColor(
+        light: .init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1)
+    )
 
     /// A color that represents the system-provided secondary grouped background color.
-    /// 
+    ///
     /// Use this color for content layered on top of the main grouped background.
-    public static let secondarySystemGroupedBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1),
-        dark: NSColor.init(red: 1, green: 1, blue: 1, alpha: 1)
-    ))
+    public static let secondarySystemGroupedBackground = Color.dynamicColor(
+        light: .init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1),
+        dark: .init(red: 1, green: 1, blue: 1, alpha: 1)
+    )
 
     /// A color that represents the system-provided tertiary grouped background color.
-    /// 
+    ///
     /// Use this color for content layered on top of secondary grouped backgrounds.
-    public static let tertiarySystemGroupedBackground = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
-        dark: NSColor.init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
-    ))
+    public static let tertiarySystemGroupedBackground = Color.dynamicColor(
+        light: .init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
+        dark: .init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
+    )
 
     // MARK: - MacOS: Gray Colors
     /// A color that represents the system-provided gray color.
-    /// 
+    ///
     /// Use this color for standard text labels.
-    public static let systemGray = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.56, green: 0.56, blue: 0.58, alpha: 1),
-        dark: NSColor.init(red: 0.56, green: 0.56, blue: 0.58, alpha: 1)
-    ))
+    public static let systemGray = Color.dynamicColor(
+        light: .init(red: 0.56, green: 0.56, blue: 0.58, alpha: 1),
+        dark: .init(red: 0.56, green: 0.56, blue: 0.58, alpha: 1)
+    )
 
     /// A color that represents the system-provided gray2 color.
-    /// 
+    ///
     /// Use this color for text labels that contain secondary content.
-    public static let systemGray2 = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.68, green: 0.68, blue: 0.70, alpha: 1),
-        dark: NSColor.init(red: 0.39, green: 0.39, blue: 0.40, alpha: 1)
-    ))
+    public static let systemGray2 = Color.dynamicColor(
+        light: .init(red: 0.68, green: 0.68, blue: 0.70, alpha: 1),
+        dark: .init(red: 0.39, green: 0.39, blue: 0.40, alpha: 1)
+    )
 
     /// A color that represents the system-provided gray3 color.
-    /// 
+    ///
     /// Use this color for text labels that contain tertiary content.
-    public static let systemGray3 = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.78, green: 0.78, blue: 0.80, alpha: 1),
-        dark: NSColor.init(red: 0.28, green: 0.28, blue: 0.29, alpha: 1)
-    ))
+    public static let systemGray3 = Color.dynamicColor(
+        light: .init(red: 0.78, green: 0.78, blue: 0.80, alpha: 1),
+        dark: .init(red: 0.28, green: 0.28, blue: 0.29, alpha: 1)
+    )
 
     /// A color that represents the system-provided gray4 color.
-    /// 
+    ///
     /// Use this color for text labels that contain quaternary content.
-    public static let systemGray4 = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.82, green: 0.82, blue: 0.84, alpha: 1),
-        dark: NSColor.init(red: 0.23, green: 0.23, blue: 0.24, alpha: 1)
-    ))
+    public static let systemGray4 = Color.dynamicColor(
+        light: .init(red: 0.82, green: 0.82, blue: 0.84, alpha: 1),
+        dark: .init(red: 0.23, green: 0.23, blue: 0.24, alpha: 1)
+    )
 
     /// A color that represents the system-provided gray5 color.
-    /// 
+    ///
     /// Use this color for text labels that contain quinary content.
-    public static let systemGray5 = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.90, green: 0.90, blue: 0.92, alpha: 1),
-        dark: NSColor.init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
-    ))
+    public static let systemGray5 = Color.dynamicColor(
+        light: .init(red: 0.90, green: 0.90, blue: 0.92, alpha: 1),
+        dark: .init(red: 0.17, green: 0.17, blue: 0.18, alpha: 1)
+    )
 
     /// A color that represents the system-provided gray6 color.
-    /// 
+    ///
     /// Use this color for text labels that contain senary content.
-    public static let systemGray6 = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
-        dark: NSColor.init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1)
-    ))
+    public static let systemGray6 = Color.dynamicColor(
+        light: .init(red: 0.95, green: 0.95, blue: 0.97, alpha: 1),
+        dark: .init(red: 0.11, green: 0.11, blue: 0.12, alpha: 1)
+    )
 
     // MARK: - MacOS: Other Colors
     /// A color that represents the system-provided separator color.
-    /// 
+    ///
     /// Use this color for thin borders or divider lines that allows some underlying content to be visible.
-    public static let separator = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
-        dark: NSColor.init(red: 0.33, green: 0.33, blue: 0.35, alpha: 1)
-    ))
+    public static let separator = Color.dynamicColor(
+        light: .init(red: 0.24, green: 0.24, blue: 0.26, alpha: 1),
+        dark: .init(red: 0.33, green: 0.33, blue: 0.35, alpha: 1)
+    )
 
     /// A color that represents the system-provided opaque separator color.
-    /// 
+    ///
     /// Use this color for borders or divider lines that are opaque.
-    public static let opaqueSeparator = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.78, green: 0.78, blue: 0.78, alpha: 1),
-        dark: NSColor.init(red: 0.22, green: 0.22, blue: 0.23, alpha: 1)
-    ))
+    public static let opaqueSeparator = Color.dynamicColor(
+        light: .init(red: 0.78, green: 0.78, blue: 0.78, alpha: 1),
+        dark: .init(red: 0.22, green: 0.22, blue: 0.23, alpha: 1)
+    )
 
     /// A color that represents the system-provided link color.
-    /// 
+    ///
     /// Use this color for links.
-    public static let link = Color(NSColor.dynamicColor(
-        light: NSColor.init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1),
-        dark: NSColor.init(red: 0.04, green: 0.52, blue: 1.00, alpha: 1)
-    ))
+    public static let link = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1),
+        dark: .init(red: 0.04, green: 0.52, blue: 1.00, alpha: 1)
+    )
 
     // MARK: MacOS: System Colors
     /// A color that represents the system-provided blue color.
@@ -465,70 +700,205 @@ extension Color {
     public static let systemIndigo = Color(NSColor.systemIndigo)
 
     // MARK: MacOS: MacOS Specific
+    /// A color that represents the system-provided scrubber textured background color.
+    ///
+    /// Use this color for the background of a scrubber control.
     public static let scrubberTexturedBackground = Color(NSColor.scrubberTexturedBackground)
+
+    /// A color that represents the system-provided text background color.
+    ///
+    /// Use this color for the background of large text, such as in a text view or word processing document.
     public static let textBackgroundColor = Color(NSColor.textBackgroundColor)
+
+    /// A color that represents the system-provided control text color.
+    ///
+    /// Use this color for text on top of standard system controls.
     public static let controlTextColor = Color(NSColor.controlTextColor)
+
+    /// A color that represents the system-provided quaternary label color.
+    ///
+    /// Use this color for text labels that contain quaternary content.
     public static let quaternaryLabelColor = Color(NSColor.quaternaryLabelColor)
+
+    /// A color that represents the system-provided find highlight color.
+    ///
+    /// Use this color for the highlight color of find indicators.
     public static let findHighlightColor = Color(NSColor.findHighlightColor)
+
+    /// A color that represents the system-provided highlight color.
+    ///
+    /// Use this color for the highlight color of selection controls.
     public static let highlightColor = Color(NSColor.highlightColor)
+
+    /// A color that represents the system-provided shadow color.
+    ///
+    /// Use this color for shadows cast by raised objects on a surface.
     public static let shadowColor = Color(NSColor.shadowColor)
+
+    /// A color that represents the system-provided window frame text color.
+    ///
+    /// Use this color for text in the frame of a window.
     public static let windowFrameTextColor = Color(NSColor.windowFrameTextColor)
+
+    /// A color that represents the system-provided window background color.
+    ///
+    /// Use this color for the background of windows.
     public static let windowBackgroundColor = Color(NSColor.windowBackgroundColor)
+
+    /// A color that represents the system-provided keyboard focus indicator color.
+    ///
+    /// Use this color for the keyboard focus ring around a control.
     public static let keyboardFocusIndicatorColor = Color(NSColor.keyboardFocusIndicatorColor)
+
+    /// A color that represents the system-provided separator color.
+    ///
+    /// Use this color for thin borders or divider lines that allows some underlying content to be visible.
     public static let separatorColor = Color(NSColor.separatorColor)
+
+    /// A color that represents the system-provided selected control color.
+    ///
+    /// Use this color for the background of selected controls.
     public static let selectedControlColor = Color(NSColor.selectedControlColor)
+
+    /// A color that represents the system-provided control background color.
+    ///
+    /// Use this color for the background of standard system controls.
     public static let controlBackgroundColor = Color(NSColor.controlBackgroundColor)
+
+    /// A color that represents the system-provided secondary label color.
+    ///
+    /// Use this color for text labels that contain secondary content.
     public static let secondaryLabelColor = Color(NSColor.secondaryLabelColor)
+
+    /// A color that represents the system-provided tertiary label color.
+    ///
+    /// Use this color for text labels that contain tertiary content.
     public static let tertiaryLabelColor = Color(NSColor.tertiaryLabelColor)
+
+    /// A color that represents the system-provided grid color.
+    ///
+    /// Use this color for gridlines in a table view.
     public static let gridColor = Color(NSColor.gridColor)
+
+    /// A color that represents the system-provided alternate selected control text color.
+    ///
+    /// Use this color for text on top of selected controls.
     public static let alternateSelectedControlTextColor = Color(NSColor.alternateSelectedControlTextColor)
-    public static let unemphasizedSelectedContentBackgroundColor = Color(NSColor.unemphasizedSelectedContentBackgroundColor)
-    // swiftlint:disable:previous identifier_name
+
+    /// A color that represents the system-provided unemphasized selected content background color.
+    ///
+    /// Use this color for the background of selected content that is unemphasized.
+    public static let unemphasizedSelectedContentBackgroundColor = Color(
+        // swiftlint:disable:previous identifier_name
+        NSColor.unemphasizedSelectedContentBackgroundColor
+    )
+
+    /// A color that represents the system-provided text color.
+    ///
+    /// Use this color for text labels.
     public static let textColor = Color(NSColor.textColor)
+
+    /// A color that represents the system-provided system brown color.
     public static let systemBrown = Color(NSColor.systemBrown)
+
+    /// A color that represents the system-provided selected content background color.
+    ///
+    /// Use this color for the background of selected content.
     public static let selectedContentBackgroundColor = Color(NSColor.selectedContentBackgroundColor)
+
+    /// A color that represents the system-provided selected text color.
+    ///
+    /// Use this color for selected text.
     public static let selectedTextColor = Color(NSColor.selectedTextColor)
+
+    /// A color that represents the system-provided label color.
+    ///
+    /// Use this color for standard text labels.
     public static let labelColor = Color(NSColor.labelColor)
+
+    /// A color that represents the system-provided unemphasized selected text color.
+    ///
+    /// Use this color for unemphasized selected text.
     public static let unemphasizedSelectedTextColor = Color(NSColor.unemphasizedSelectedTextColor)
+
+    /// A color that represents the system-provided unemphasized selected text background color.
+    ///
+    /// Use this color for the background of unemphasized selected text.
     public static let unemphasizedSelectedTextBackgroundColor = Color(NSColor.unemphasizedSelectedTextBackgroundColor)
+
+    /// A color that represents the system-provided disabled control text color.
+    ///
+    /// Use this color for text on disabled controls.
     public static let disabledControlTextColor = Color(NSColor.disabledControlTextColor)
+
+    /// A color that represents the system-provided header text color.
+    ///
+    /// Use this color for text in headers.
     public static let headerTextColor = Color(NSColor.headerTextColor)
+
+    /// A color that represents the system-provided link color.
+    ///
+    /// Use this color for links.
     public static let linkColor = Color(NSColor.linkColor)
+
+    /// A color that represents the system-provided selected text background color.
+    ///
+    /// Use this color for the background of selected text.
     public static let selectedTextBackgroundColor = Color(NSColor.selectedTextBackgroundColor)
+
+    /// A color that represents the system-provided control color.
+    ///
+    /// Use this color for standard system controls.
     public static let controlColor = Color(NSColor.controlColor)
+
+    /// A color that represents the system-provided selected control text color.
+    ///
+    /// Use this color for text on top of selected controls.
     public static let selectedControlTextColor = Color(NSColor.selectedControlTextColor)
+
+    /// A color that represents the system-provided under page background color.
+    ///
+    /// Use this color for the background of a page that is under another page.
     public static let underPageBackgroundColor = Color(NSColor.underPageBackgroundColor)
+
+    /// A color that represents the system-provided selected menu item text color.
+    ///
+    /// Use this color for the text of selected menu items.
     public static let selectedMenuItemTextColor = Color(NSColor.selectedMenuItemTextColor)
 #endif
 }
 
 #if canImport(AppKit)
-extension NSColor {
-    fileprivate static func dynamicColor(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> NSColor {
-        return NSColor(
-            name: named,
-            dynamicProvider: { traits in
-                if traits.name == .darkAqua || traits.name == .vibrantDark {
-                    return light
-                } else {
-                    return dark
+extension Color {
+    fileprivate static func dynamicColor(light: NSColor, dark: NSColor, named: String = "DynamicColor") -> Color {
+        return Color(
+            NSColor(
+                name: named,
+                dynamicProvider: { traits in
+                    if traits.name == .darkAqua || traits.name == .vibrantDark {
+                        return light
+                    } else {
+                        return dark
+                    }
                 }
-            }
+            )
         )
     }
 }
 #endif
 
 #if canImport(UIKit)
-extension UIColor {
-    fileprivate static func dynamicColor(light: UIColor, dark: UIColor, named: String = "DynamicColor") -> UIColor {
-        return UIColor(
-            dynamicProvider: { trait in
-                return trait.userInterfaceStyle == .dark ? dark : light
-            }
+extension Color {
+    fileprivate static func dynamicColor(light: UIColor, dark: UIColor, named: String = "DynamicColor") -> Color {
+        return Color(
+            UIColor(
+                dynamicProvider: { trait in
+                    return trait.userInterfaceStyle == .dark ? dark : light
+                }
+            )
         )
     }
 }
 #endif
-
 #endif
+// swiftlint:disable:this file_length
