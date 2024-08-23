@@ -1,6 +1,6 @@
 # Colors
 
-Colors is a Swift Package to enable all system colors in SwiftUI trough a `Color` extension.
+Colors is a Swift Package to enable all system colors in SwiftUI trough a `Color` extension.  
 Colors which were previously only available in `UIColor`/`NSColor` are now available in `Color` as well.
 
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
