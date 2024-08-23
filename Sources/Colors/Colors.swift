@@ -27,7 +27,6 @@ extension Color {
 #endif
     }
 
-
     /// A color that represents the system-provided text color.
     ///
     /// Use this color for text in a standard state, such as a label in a navigation bar or a system button.
@@ -604,6 +603,7 @@ extension Color {
     ///
     /// Use this color for the background of selected content that is unemphasized.
     public static var unemphasizedSelectedContentBackgroundColor: Color {
+        // swiftlint:disable:previous identifier_name
 #if os(macOS)
         Color(NSColor.unemphasizedSelectedContentBackgroundColor)
 #else

@@ -12,7 +12,12 @@
 #if canImport(SwiftUI)
 import SwiftUI
 
+/// A set of system-provided colors that adapt to the current environment.
+/// 
+/// Use these colors to create visual continuity between your app and the system.
+/// These colors automatically adapt to vibrancy and accessibility settings, so they always remain readable.
 struct BaseColor {
+    // swiftlint:disable:previous type_body_length
     /// A color that represents the system-provided text color.
     ///
     /// Use this color for text in a standard state, such as a label in a navigation bar or a system button.
