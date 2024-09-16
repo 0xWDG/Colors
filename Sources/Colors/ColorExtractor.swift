@@ -123,7 +123,7 @@ extension SystemColor {
     ///
     /// Usage in **AppKit**:
     /// ```swift
-    /// UIColor.systemPink.createInitializerFor(color: "systemPink")
+    /// NSColor.systemPink.createInitializerFor(color: "systemPink")
     /// ```
     ///
     /// Returns:

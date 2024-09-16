@@ -62,7 +62,7 @@ UIColor.systemPink.createInitializerFor(color: "systemPink")
 
 Extract from **AppKit**:
 ```swift
-UIColor.systemPink.createInitializerFor(color: "systemPink")
+NSColor.systemPink.createInitializerFor(color: "systemPink")
 ```
 
 Output:
