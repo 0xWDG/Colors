@@ -76,7 +76,7 @@ public static let systemPink = Color.dynamicColor(
 
 ## How to add a new color
 
-1. Add the color to the `BaseColor` enum.
+1. Add the color to the `BaseColor` struct.
     ```swift
     /// A color that represents the system-provided systemPink color.
     public static let systemPink = Color.dynamicColor(
