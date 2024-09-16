@@ -51,6 +51,29 @@ struct ContentView: View {
 }
 ```
 
+## Extract color from UIColor/NSColor
+
+Use this to add new/missing colors to the `BaseColor` and `Color` extension.
+
+Extract from **UIKit**:
+```swift
+UIColor.systemPink.createInitializerFor(color: "systemPink")
+```
+
+Extract from **AppKit**:
+```swift
+UIColor.systemPink.createInitializerFor(color: "systemPink")
+```
+
+Output:
+```swift
+/// A color that represents the system-provided systemPink color.
+public static let systemPink = Color.dynamicColor(
+    light: .init(red: 1.00, green: 0.18, blue: 0.33, alpha: 1.00),
+    dark: .init(red: 1.00, green: 0.18, blue: 0.33, alpha: 1.00)
+)
+```
+
 ## Contact
 
 We can get in touch via [Mastodon](https://mastodon.social/@0xWDG), [Twitter/X](https://twitter.com/0xWDG), [Discord](https://discordapp.com/users/918438083861573692), [Email](mailto:email@wesleydegroot.nl), [Website](https://wesleydegroot.nl).

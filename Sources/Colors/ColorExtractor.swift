@@ -3,6 +3,10 @@
 //  Colors
 //
 //  Created by Wesley de Groot on 16/09/2024.
+//  https://wesleydegroot.nl
+//
+//  https://github.com/0xWDG/SwiftUI-Color
+//  MIT License
 //
 
 #if canImport(SwiftUI) && (canImport(UIKit) || canImport(AppKit))
