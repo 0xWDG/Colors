@@ -324,6 +324,44 @@ extension Color {
 #endif
     }
 
+    /// A color that represents the system-provided cyan color.
+    public static var systemCyan: Color {
+#if os(iOS) || os(tvOS)
+        if #available(iOS 15.0, *) {
+            Color(UIColor.systemCyan)
+        } else {
+            BaseColor.systemCyan
+        }
+#elseif os(macOS)
+        if #available(macOS 10.12, *) {
+            Color(NSColor.systemCyan)
+        } else {
+            BaseColor.systemCyan
+        }
+#else
+            BaseColor.systemCyan
+#endif
+    }
+
+    /// A color that represents the system-provided mint color.
+    public static var systemMint: Color {
+#if os(iOS) || os(tvOS)
+        if #available(iOS 15.0, *) {
+            Color(UIColor.systemMint)
+        } else {
+            BaseColor.systemMint
+        }
+#elseif os(macOS)
+        if #available(macOS 10.12, *) {
+            Color(NSColor.systemMint)
+        } else {
+            BaseColor.systemMint
+        }
+#else
+            BaseColor.systemMint
+#endif
+    }
+
     /// A color that represents the system-provided purple color.
     public static var systemPurple: Color {
 #if os(iOS) || os(tvOS)

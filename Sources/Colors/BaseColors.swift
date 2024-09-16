@@ -240,6 +240,18 @@ struct BaseColor {
         dark: .init(red: 0.04, green: 0.52, blue: 1.00, alpha: 1)
     )
 
+    /// A color that represents the system-provided cyan color.
+    public static let systemCyan = Color.dynamicColor(
+        light: .init(red: 0.20, green: 0.68, blue: 0.90, alpha: 1),
+        dark: .init(red: 0.39, green: 0.82, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the system-provided mint color.
+    public static let systemMint = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.78, blue: 0.74, alpha: 1),
+        dark: .init(red: 0.39, green: 0.90, blue: 0.89, alpha: 1)
+    )
+
     /// A color that represents the system-provided purple color.
     public static let systemPurple = Color.dynamicColor(
         light: .init(red: 0.69, green: 0.32, blue: 0.87, alpha: 1),
