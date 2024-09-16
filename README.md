@@ -74,6 +74,54 @@ public static let systemPink = Color.dynamicColor(
 )
 ```
 
+## How to add a new color
+
+1. Add the color to the `BaseColor` enum.
+    ```swift
+    /// A color that represents the system-provided systemPink color.
+    public static let systemPink = Color.dynamicColor(
+        light: .init(red: 1.00, green: 0.18, blue: 0.33, alpha: 1.00),
+        dark: .init(red: 1.00, green: 0.18, blue: 0.33, alpha: 1.00)
+    )
+    ```
+2. Add the color to the `Color` extension.
+   - Use the native `Color`,`NSColor`,`UIColor.colorName` where possible.
+   - Add #if os(iOS) / #if os(macOS) where needed.
+   - Example (works on almost all versions):
+   ```swift
+    /// A color that represents the system-provided pink color.
+    public static var systemPink: Color {
+    #if os(iOS) || os(tvOS)
+        Color(UIColor.systemPink)
+    #elseif os(macOS)
+        Color(NSColor.systemPink)
+    #else
+        BaseColor.systemPink
+    #endif
+    }
+    ```
+    - Example 2 (works from a specific iOS/macOS version):
+    ```swift
+    /// A color that represents the system-provided cyan color.
+    public static var systemCyan: Color {
+    #if os(iOS) || os(tvOS)
+        if #available(iOS 15.0, *) {
+            Color(UIColor.systemCyan)
+        } else {
+            BaseColor.systemCyan
+        }
+    #elseif os(macOS)
+        if #available(macOS 12.0, *) {
+            Color(NSColor.systemCyan)
+        } else {
+            BaseColor.systemCyan
+        }
+    #else
+            BaseColor.systemCyan
+    #endif
+    }
+    ```
+
 ## Contact
 
 We can get in touch via [Mastodon](https://mastodon.social/@0xWDG), [Twitter/X](https://twitter.com/0xWDG), [Discord](https://discordapp.com/users/918438083861573692), [Email](mailto:email@wesleydegroot.nl), [Website](https://wesleydegroot.nl).
