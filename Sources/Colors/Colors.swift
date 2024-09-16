@@ -333,7 +333,7 @@ extension Color {
             BaseColor.systemCyan
         }
 #elseif os(macOS)
-        if #available(macOS 10.12, *) {
+        if #available(macOS 12.0, *) {
             Color(NSColor.systemCyan)
         } else {
             BaseColor.systemCyan
