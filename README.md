@@ -3,10 +3,10 @@
 Colors is a Swift Package to enable all system colors in SwiftUI trough a `Color` extension.  
 Colors which were previously only available in `UIColor`/`NSColor` are now available in `Color` as well.
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FSwiftUI-Color%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xWDG/SwiftUI-Color)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FColors%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xWDG/Colors)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xWDG%2FColors%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xWDG/Colors)
 [![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
-![License](https://img.shields.io/github/license/0xWDG/SwiftUI-Color)
+![License](https://img.shields.io/github/license/0xWDG/Colors)
 
 Available colors are: `lightText`, `darkText`, `placeholderText`, `label`, `secondaryLabel`, `tertiaryLabel`, `quaternaryLabel`, `systemBackground`, `secondarySystemBackground`, `tertiarySystemBackground`, `systemFill`, `secondarySystemFill`, `tertiarySystemFill`, `quaternarySystemFill`, `systemGroupedBackground`, `secondarySystemGroupedBackground`, `tertiarySystemGroupedBackground`, `systemGray`, `systemGray2`, `systemGray3`, `systemGray4`, `systemGray5`, `systemGray6`, `separator`, `opaqueSeparator`, `link`, `systemBlue`, `systemCyan`, `systemMint`, `systemPurple`, `systemGreen`, `systemYellow`, `systemOrange`, `systemPink`, `systemRed`, `systemTeal`, `systemIndigo`, `scrubberTexturedBackground`, `textBackgroundColor`, `controlTextColor`, `quaternaryLabelColor`, `findHighlightColor`, `highlightColor`, `shadowColor`, `windowFrameTextColor`, `windowBackgroundColor`, `keyboardFocusIndicatorColor`, `separatorColor`, `selectedControlColor`, `controlBackgroundColor`, `secondaryLabelColor`, `tertiaryLabelColor`, `gridColor`, `alternateSelectedControlTextColor`, `unemphasizedSelectedContentBackgroundColor`, `textColor`, `systemBrown`, `selectedContentBackgroundColor`, `selectedTextColor`, `labelColor`, `placeholderTextColor`, `unemphasizedSelectedTextBackgroundColor`, `disabledControlTextColor`, `headerTextColor`, `linkColor`, `selectedTextBackgroundColor`, `unemphasizedSelectedTextColor`, `controlColor`, `selectedControlTextColor`, `underPageBackgroundColor`, `selectedMenuItemTextColor`.
 
