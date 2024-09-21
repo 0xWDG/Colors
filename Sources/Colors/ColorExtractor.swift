@@ -24,7 +24,12 @@ extension SystemColor {
     /// Extract dark mode color
     public var dark: SystemColor {
 #if canImport(UIKit)
+#if os(watchOS)
+        // Since watchOS does not have dark/lightmode we just return the color.
+        self
+#else
         resolvedColor(with: .init(userInterfaceStyle: .dark))
+#endif
 #else
         var value: SystemColor?
 
@@ -45,7 +50,12 @@ extension SystemColor {
     /// Extract light mode color
     public var light: SystemColor {
 #if canImport(UIKit)
+#if os(watchOS)
+        // Since watchOS does not have dark/lightmode we just return the color.
+        self
+#else
         resolvedColor(with: .init(userInterfaceStyle: .light))
+#endif
 #else
         var value: SystemColor?
 
@@ -82,33 +92,24 @@ extension SystemColor {
         )
     }
 
-    /// Get the CI Color of the current color
-    var getCIcolor: CIColor {
-#if canImport(UIKit)
-        return CIColor(color: self)
-#elseif canImport(AppKit)
-        return CIColor(color: self)! // swiftlint:disable:this force_unwrapping
-#endif
-    }
-
     /// Get the red value component of the color
     public var redValue: CGFloat {
-        return getCIcolor.red
+        return self.cgColor.components?[0] ?? 0
     }
 
     /// Get the green value component of the color
     public var greenValue: CGFloat {
-        return getCIcolor.green
+        return self.cgColor.components?[1] ?? 0
     }
 
     /// Get the blue value component of the color
     public var blueValue: CGFloat {
-        return getCIcolor.blue
+        return self.cgColor.components?[2] ?? 0
     }
 
     /// Get the alpha value component of the color
     public var alphaValue: CGFloat {
-        return getCIcolor.alpha
+        return self.cgColor.components?[3] ?? 0
     }
 
     /// Create initializer for (BaseColors.swift)

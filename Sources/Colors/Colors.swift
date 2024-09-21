@@ -327,7 +327,7 @@ extension Color {
     /// A color that represents the system-provided cyan color.
     public static var systemCyan: Color {
 #if os(iOS) || os(tvOS)
-        if #available(iOS 15.0, *) {
+        if #available(iOS 15.0, tvOS 15.0, *) {
             Color(UIColor.systemCyan)
         } else {
             BaseColor.systemCyan
@@ -346,7 +346,7 @@ extension Color {
     /// A color that represents the system-provided mint color.
     public static var systemMint: Color {
 #if os(iOS) || os(tvOS)
-        if #available(iOS 15.0, *) {
+        if #available(iOS 15.0, tvOS 15.0, *) {
             Color(UIColor.systemMint)
         } else {
             BaseColor.systemMint
