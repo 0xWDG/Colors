@@ -582,9 +582,9 @@ extension Color {
                 name: named,
                 dynamicProvider: { traits in
                     if traits.name == .darkAqua || traits.name == .vibrantDark {
-                        return light
-                    } else {
                         return dark
+                    } else {
+                        return light
                     }
                 }
             )
