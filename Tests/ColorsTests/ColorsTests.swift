@@ -13,6 +13,7 @@ import SwiftUI
 @testable import Colors
 
 final class ColorsTests: XCTestCase {
+    // swiftlint:disable:next function_body_length
     func testSystemColorsAreAvailable() {
         let colors: [Color] = [
             .lightText,
