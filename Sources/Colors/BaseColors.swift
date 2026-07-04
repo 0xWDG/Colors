@@ -134,6 +134,14 @@ struct BaseColor {
         dark: .init(red: 0.46, green: 0.46, blue: 0.50, alpha: 1)
     )
 
+    /// A color appropriate for filling large areas that require subtle emphasis.
+    ///
+    /// Example: The content area of a form.
+    public static let quinarySystemFill = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.01),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.01)
+    )
+
     // MARK: - MacOS: Grouped Background Colors
     /// A color that represents the system-provided grouped background color.
     ///
@@ -332,6 +340,14 @@ struct BaseColor {
         dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
     )
 
+    /// A color that represents the system-provided quinary label color.
+    ///
+    /// Use this color for large scale images or subtle decorative elements.
+    public static let quinaryLabel = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.05),
+        dark: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.05)
+    )
+
     /// A color that represents the system-provided find highlight color.
     ///
     /// Use this color for the highlight color of find indicators.
@@ -453,6 +469,14 @@ struct BaseColor {
         dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
     )
 
+    /// A color that represents the system-provided text insertion point color.
+    ///
+    /// Use this color for insertion points in editable text.
+    public static let textInsertionPointColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00),
+        dark: .init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00)
+    )
+
     /// A color that represents the system-provided system brown color.
     public static let systemBrown = Color.dynamicColor(
         light: .init(red: 0.64, green: 0.52, blue: 0.37, alpha: 1),
@@ -553,6 +577,12 @@ struct BaseColor {
     public static let selectedControlTextColor = Color.dynamicColor(
         light: .init(red: 0.00, green: 0.00, blue: 0.00, alpha: 1),
         dark: .init(red: 1.00, green: 1.00, blue: 1.00, alpha: 1)
+    )
+
+    /// A color that represents the user's current preferred accent color.
+    public static let controlAccentColor = Color.dynamicColor(
+        light: .init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00),
+        dark: .init(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00)
     )
 
     /// A color that represents the system-provided under page background color.

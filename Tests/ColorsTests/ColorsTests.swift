@@ -9,14 +9,89 @@
 //  MIT License
 //
 import XCTest
+import SwiftUI
 @testable import Colors
 
 final class ColorsTests: XCTestCase {
-    func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
+    func testSystemColorsAreAvailable() {
+        let colors: [Color] = [
+            .lightText,
+            .darkText,
+            .placeholderText,
+            .label,
+            .secondaryLabel,
+            .tertiaryLabel,
+            .quaternaryLabel,
+            .systemBackground,
+            .secondarySystemBackground,
+            .tertiarySystemBackground,
+            .systemFill,
+            .secondarySystemFill,
+            .tertiarySystemFill,
+            .quaternarySystemFill,
+            .quinarySystemFill,
+            .systemGroupedBackground,
+            .secondarySystemGroupedBackground,
+            .tertiarySystemGroupedBackground,
+            .systemGray,
+            .systemGray2,
+            .systemGray3,
+            .systemGray4,
+            .systemGray5,
+            .systemGray6,
+            .separator,
+            .opaqueSeparator,
+            .link,
+            .systemBlue,
+            .systemCyan,
+            .systemMint,
+            .systemPurple,
+            .systemGreen,
+            .systemYellow,
+            .systemOrange,
+            .systemPink,
+            .systemRed,
+            .systemTeal,
+            .systemIndigo,
+            .scrubberTexturedBackground,
+            .textBackgroundColor,
+            .controlTextColor,
+            .quaternaryLabelColor,
+            .quinaryLabel,
+            .findHighlightColor,
+            .highlightColor,
+            .shadowColor,
+            .windowFrameTextColor,
+            .windowBackgroundColor,
+            .keyboardFocusIndicatorColor,
+            .separatorColor,
+            .selectedControlColor,
+            .controlBackgroundColor,
+            .secondaryLabelColor,
+            .tertiaryLabelColor,
+            .gridColor,
+            .alternateSelectedControlTextColor,
+            .unemphasizedSelectedContentBackgroundColor,
+            .textColor,
+            .textInsertionPointColor,
+            .systemBrown,
+            .selectedContentBackgroundColor,
+            .selectedTextColor,
+            .labelColor,
+            .placeholderTextColor,
+            .unemphasizedSelectedTextBackgroundColor,
+            .disabledControlTextColor,
+            .headerTextColor,
+            .linkColor,
+            .selectedTextBackgroundColor,
+            .unemphasizedSelectedTextColor,
+            .controlColor,
+            .selectedControlTextColor,
+            .controlAccentColor,
+            .underPageBackgroundColor,
+            .selectedMenuItemTextColor
+        ]
 
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+        XCTAssertEqual(colors.count, 75)
     }
 }

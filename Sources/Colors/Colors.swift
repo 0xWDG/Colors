@@ -137,6 +137,12 @@ extension Color {
     public static var systemFill: Color {
 #if os(iOS)
         Color(UIColor.systemFill)
+#elseif os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.systemFill)
+        } else {
+            BaseColor.systemFill
+        }
 #else
         BaseColor.systemFill
 #endif
@@ -148,6 +154,12 @@ extension Color {
     public static var secondarySystemFill: Color {
 #if os(iOS)
         Color(UIColor.secondarySystemFill)
+#elseif os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.secondarySystemFill)
+        } else {
+            BaseColor.secondarySystemFill
+        }
 #else
         BaseColor.secondarySystemFill
 #endif
@@ -159,6 +171,12 @@ extension Color {
     public static var tertiarySystemFill: Color {
 #if os(iOS)
         Color(UIColor.tertiarySystemFill)
+#elseif os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.tertiarySystemFill)
+        } else {
+            BaseColor.tertiarySystemFill
+        }
 #else
         BaseColor.tertiarySystemFill
 #endif
@@ -170,8 +188,29 @@ extension Color {
     public static var quaternarySystemFill: Color {
 #if os(iOS)
         Color(UIColor.quaternarySystemFill)
+#elseif os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.quaternarySystemFill)
+        } else {
+            BaseColor.quaternarySystemFill
+        }
 #else
         BaseColor.quaternarySystemFill
+#endif
+    }
+
+    /// A color appropriate for filling large areas that require subtle emphasis.
+    ///
+    /// Example: The content area of a form.
+    public static var quinarySystemFill: Color {
+#if os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.quinarySystemFill)
+        } else {
+            BaseColor.quinarySystemFill
+        }
+#else
+        BaseColor.quinarySystemFill
 #endif
     }
 
@@ -192,9 +231,9 @@ extension Color {
     /// Use this color for content layered on top of the main grouped background.
     public static var secondarySystemGroupedBackground: Color {
 #if os(iOS)
-        Color(UIColor.secondarySystemBackground)
+        Color(UIColor.secondarySystemGroupedBackground)
 #else
-        BaseColor.secondarySystemBackground
+        BaseColor.secondarySystemGroupedBackground
 #endif
     }
 
@@ -495,6 +534,21 @@ extension Color {
 #endif
     }
 
+    /// A color that represents the system-provided quinary label color.
+    ///
+    /// Use this color for large scale images or subtle decorative elements.
+    public static var quinaryLabel: Color {
+#if os(macOS)
+        if #available(macOS 11.0, *) {
+            Color(NSColor.quinaryLabel)
+        } else {
+            BaseColor.quinaryLabel
+        }
+#else
+        BaseColor.quinaryLabel
+#endif
+    }
+
     /// A color that represents the system-provided find highlight color.
     ///
     /// Use this color for the highlight color of find indicators.
@@ -660,9 +714,26 @@ extension Color {
 #endif
     }
 
+    /// A color that represents the system-provided text insertion point color.
+    ///
+    /// Use this color for insertion points in editable text.
+    public static var textInsertionPointColor: Color {
+#if os(macOS)
+        if #available(macOS 14.0, *) {
+            Color(NSColor.textInsertionPointColor)
+        } else {
+            BaseColor.textInsertionPointColor
+        }
+#else
+        BaseColor.textInsertionPointColor
+#endif
+    }
+
     /// A color that represents the system-provided system brown color.
     public static var systemBrown: Color {
-#if os(macOS)
+#if os(iOS) || os(tvOS)
+        Color(UIColor.systemBrown)
+#elseif os(macOS)
         Color(NSColor.systemBrown)
 #else
         BaseColor.systemBrown
@@ -798,6 +869,19 @@ extension Color {
         Color(NSColor.selectedControlTextColor)
 #else
         BaseColor.selectedControlTextColor
+#endif
+    }
+
+    /// A color that represents the user's current preferred accent color.
+    public static var controlAccentColor: Color {
+#if os(macOS)
+        if #available(macOS 10.14, *) {
+            Color(NSColor.controlAccentColor)
+        } else {
+            BaseColor.controlAccentColor
+        }
+#else
+        BaseColor.controlAccentColor
 #endif
     }
 
